@@ -1,6 +1,9 @@
 <template>
-    <mainTop>
-    </mainTop>
+    <div class="mainBox">
+        <mainTop>
+        </mainTop>
+    </div>
+
 </template>
 
 <script>
@@ -8,7 +11,7 @@
 
     export default {
         name: "main",
-        component: {mainTop}
+        components: {mainTop}
     }
 </script>
 
