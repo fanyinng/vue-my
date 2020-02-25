@@ -1,10 +1,14 @@
 <template>
-    
+    <mainTop>
+    </mainTop>
 </template>
 
 <script>
+    import mainTop from "./main_top"
+
     export default {
-        name: "main"
+        name: "main",
+        component: {mainTop}
     }
 </script>
 
