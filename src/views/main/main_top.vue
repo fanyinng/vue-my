@@ -1,11 +1,19 @@
 <template>
     <div class="normalBox">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-            <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-            <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-        </el-tabs>
+        <div class="topItem">
+            <div class="logoItem">
+                <img src="../../static/images/logoTemp.png"/>
+            </div>
+            <div class="menuItem">
+                <el-menu :default-active="activeName" class="el-menu-demo" mode="horizontal" @select="handleClick"
+                         active-text-color="#3085FF">
+                    <el-menu-item index="1">组件</el-menu-item>
+                    <el-menu-item index="2">更新</el-menu-item>
+                    <el-menu-item index="3">关于</el-menu-item>
+                    <el-menu-item index="4">资源</el-menu-item>
+                </el-menu>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -14,7 +22,7 @@
         name: "main_top",
         data() {
             return {
-                activeName: "",
+                activeName: '1',
             }
         },
         methods: {
